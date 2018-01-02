@@ -42,7 +42,7 @@ class Folder(models.Model):
         ancestors = self.get_ancestors() + [self]
         return ''.join([a.name for a in ancestors]).lower()
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
     class Meta:
